@@ -5,8 +5,8 @@ resource "random_id" "example" {
 output "sensitive_output" {
   value     = random_id.example.hex
   sensitive = true
+tags = {
+  Name = "sensitive-output"
+}
 }
 
-tags = {
-  Name = "my-name"
-}
